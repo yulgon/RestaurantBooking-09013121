@@ -1,7 +1,13 @@
+#include "gmock/gmock.h"
 #include "booking_scheduler.cpp"
 
 class TestableBookingScheduler : public BookingScheduler {
 public:
+    TestableBookingScheduler(int capacityPerHour) :
+        BookingScheduler{ capacityPerHour } {
+    }
+    MOCK_METHOD(time_t, getNow, (), (override));
+    /*
     TestableBookingScheduler(int capacityPerHour, tm dateTime) :
         BookingScheduler{ capacityPerHour },
         dateTime{ dateTime } {
@@ -11,4 +17,5 @@ public:
     }
 private:
     tm dateTime;
+    */
 };
