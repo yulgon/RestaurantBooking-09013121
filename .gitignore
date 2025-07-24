@@ -403,7 +403,7 @@ FodyWeavers.xsd
 
 # Local History for Visual Studio Code
 .history/
-
+coverage--/
 # Built Visual Studio Code Extensions
 *.vsix
 
